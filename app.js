@@ -39,10 +39,14 @@ const realTime = () => {
   
   
   const currentTime = new Date()
+  const currentDay = weekdays[currentTime.getDay()]
   const currentHour = currentTime.getHours()
   const currentMinute = currentTime.getMinutes()
   const currentSecond = currentTime.getSeconds()
+  const currentDate = currentTime.getDate()
+  console.log(currentDate)
   
+  document.getElementById('day').textContent = `${currentDate}, ${currentDay}`
   document.getElementById('hour').textContent = currentHour
   document.getElementById('minutes').textContent = currentMinute
   document.getElementById('second').textContent = currentSecond
