@@ -44,12 +44,13 @@ const realTime = () => {
   const currentMinute = currentTime.getMinutes()
   const currentSecond = currentTime.getSeconds()
   const currentDate = currentTime.getDate()
-  console.log(currentDate)
+  // console.log(currentDate)
   
+  const date = new Date()
+  let currenttimes = date.toLocaleTimeString("en-us", {timeStyle: "medium"})
+
   document.getElementById('day').textContent = `${currentDate}, ${currentDay}`
-  document.getElementById('hour').textContent = currentHour
-  document.getElementById('minutes').textContent = currentMinute
-  document.getElementById('second').textContent = currentSecond
+  document.getElementById('hour').textContent = currenttimes
 }
 
 setInterval(()=>{
